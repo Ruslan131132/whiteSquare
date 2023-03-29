@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Racing game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="screen screen_start screen_show">
+      <div class="start__menu slideDown">
+        <div class="start__menu-container">
+          <div class="difficulty">
+            <p class="difficulty__title" style="margin-bottom: 10px">Выберите уровень сложности</p>
+            <button class="difficulty__button easy">Легкий</button>
+            <button class="difficulty__button medium active">Средний</button>
+            <button class="difficulty__button hard">Сложный</button>
+            <p class="difficulty-selected">Выбрана сложность: средняя</p>
+          </div>
+
+          <button class="game__start">Начать игру</button>
+        </div>
+        <!-- /.start__menu-container -->
+      </div>
+    </div>
+    <div class="screen screen_game">
+      <div class="score_container hide">
+        <div class="score_inner">
+          <div class="score"></div>
+        </div>
+      </div>
+      <div class="game">
+        <div class="gamearea"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

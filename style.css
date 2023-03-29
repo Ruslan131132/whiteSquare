@@ -1,0 +1,331 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+:root {
+    --color-pink: #e31b6d;
+    --color-dark: #17181c;
+    --color-white: #f7f7f7;
+    --color-surf: #08fdd8;
+}
+
+.hide {
+    display: none;
+}
+
+.car,
+.enemy {
+    width: 50px;
+    height: 100px;
+    background-image: url(image/player.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 225px;
+    bottom: 10px;
+}
+
+.gamearea {
+    height: 100vh;
+    width: 500px;
+    position: relative;
+    margin: auto;
+    background: rgb(143, 143, 143);
+    overflow: hidden;
+}
+
+.line {
+    position: absolute;
+    width: 10px;
+    height: 50px;
+    background: #ffffff;
+    /*left: 245px;*/
+
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.start__menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    background: var(--color-white);
+    text-align: center;
+    border: 2px solid var(--color-dark);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 201;
+}
+
+.difficulty {
+    padding: 20px 0;
+    border-bottom: 2px solid var(--color-dark);
+}
+
+.difficulty p {
+    font-weight: 500;
+}
+
+.difficulty__title {
+    font-size: 1.5rem;
+    color: var(--color-dark);
+}
+
+.difficulty__subtitle {
+    font-size: 1rem;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.difficulty-selected {
+    font-size: 1rem;
+    color: #999;
+}
+
+.difficulty__button {
+    cursor: pointer;
+    min-width: 100px;
+    padding: 0.5rem;
+    margin: 0 5px 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    font-family: inherit;
+    background-color: var(--color-dark);
+    outline: none;
+    border: 1px solid var(--color-dark);
+    border-radius: 4px;
+    transition: all 0.2s linear;
+}
+
+.difficulty__button.active {
+    color: var(--color-dark);
+    background-color: #fff;
+}
+
+.difficulty__button:hover {
+    color: var(--color-dark);
+    background-color: #fff;
+    border-color: #999;
+}
+
+.game__start {
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    background: var(--color-dark);
+    cursor: pointer;
+    font-weight: 500;
+    font-family: inherit;
+    transition: all 0.2s linear;
+    z-index: 200;
+    border: 0;
+    outline: none;
+}
+
+.game__start:focus {
+    outline: none;
+}
+
+.game__start:hover {
+    color: var(--color-dark);
+    background: #fff;
+}
+
+.score_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background: var(--color-dark);
+    z-index: 200;
+    font-size: 1.5rem;
+    color: var(--color-surf);
+    text-align: center;
+    font-weight: 500;
+}
+
+.score_inner {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 100%;
+}
+
+.score_inner div {
+    font-family: inherit;
+    flex: 1 1 0;
+}
+
+.screen {
+    height: 100vh;
+    width: 100vw;
+    transition: margin 0.5s ease-in;
+}
+
+.screen-up {
+    margin-top: -100vh;
+}
+
+.screen_show {
+    display: block;
+}
+
+.screen_hide {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .start__menu.slideDown {
+        width: 70%;
+    }
+
+    .difficulty__button {
+        min-width: 140px;
+    }
+
+    .gamearea {
+        width: 100%;
+    }
+}
