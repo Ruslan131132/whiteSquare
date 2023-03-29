@@ -196,10 +196,10 @@ let swipeAction = function() {
     posY1 = evt.clientY;
 
 
-    if (posX1 == settings.x || Math.abs(posX1 - settings.x)) {
+    if (posX1 == settings.x || Math.abs(posX1 - settings.x) < 30) {
         keys.ArrowRight = false
         keys.ArrowLeft = false
-        settings.x = Math.ceil(posX1)
+        settings.x = Math.ceil(posX1) - 25
         if (settings.x > gameArea.offsetWidth - car.offsetWidth) {
             settings.x = gameArea.offsetWidth - car.offsetWidth
         }
